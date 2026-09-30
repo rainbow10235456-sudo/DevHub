@@ -1,13 +1,12 @@
 import Navbar from './components/Navbar'
+import Hero from './components/Hero'
 
 function App() {
   return (
     <>
       <Navbar />
-
       <main>
-        <h1>DevHub</h1>
-        <p>My personal developer productivity platform.</p>
+        <Hero />
       </main>
     </>
   )
