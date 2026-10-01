@@ -1,29 +1,50 @@
-const skills = [
-  'HTML',
-  'CSS',
-  'JavaScript',
-  'TypeScript',
-  'React',
-  'Java',
-  'Spring Boot',
-  'PostgreSQL',
-  'Git',
-  'Docker',
+interface SkillCategory {
+  name: string
+  skills: string[]
+}
+
+const skillCategories: SkillCategory[] = [
+  {
+    name: 'Frontend',
+    skills: ['HTML', 'CSS', 'JavaScript', 'TypeScript', 'React'],
+  },
+  {
+    name: 'Backend',
+    skills: ['Java', 'Spring Boot', 'REST API'],
+  },
+  {
+    name: 'Database',
+    skills: ['PostgreSQL', 'SQL'],
+  },
+  {
+    name: 'Tools',
+    skills: ['Git', 'Docker', 'AWS'],
+  },
 ]
 
 function Skills() {
   return (
-    <section id="skills" className="skills">
-      <div className="skills-content">
-        <p className="section-label">Skills</p>
-
-        <h2>Technologies I work with</h2>
+    <section id="skills" className="skills page-section">
+      <div className="container">
+        <div className="section-header">
+          <p className="section-label">Technical Skills</p>
+          <h2>Tools I use to build complete applications.</h2>
+          <p>
+            My current toolkit covers the browser, server, database, and the
+            development workflow connecting them.
+          </p>
+        </div>
 
         <div className="skills-grid">
-          {skills.map((skill) => (
-            <div key={skill} className="skill-card">
-              {skill}
-            </div>
+          {skillCategories.map((category) => (
+            <article key={category.name} className="skill-card">
+              <h3>{category.name}</h3>
+              <ul>
+                {category.skills.map((skill) => (
+                  <li key={skill}>{skill}</li>
+                ))}
+              </ul>
+            </article>
           ))}
         </div>
       </div>
