@@ -136,6 +136,39 @@
   font-size: 0.875rem;
 }
 
+.site-footer {
+  padding: 2rem;
+  border-top: 1px solid #ddd;
+}
+
+.footer-content {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+
+.footer-brand {
+  margin: 0;
+  font-weight: 700;
+}
+
+.footer-copyright {
+  margin: 0.25rem 0 0;
+  font-size: 0.875rem;
+}
+
+.footer-links {
+  display: flex;
+  gap: 1rem;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
 @media (max-width: 480px) {
   .projects {
     padding: 4rem 1rem;
@@ -143,5 +176,10 @@
 
   .projects h2 {
     font-size: 2rem;
+  }
+
+  .footer-content {
+    align-items: flex-start;
+    flex-direction: column;
   }
 }
